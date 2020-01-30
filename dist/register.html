@@ -6,31 +6,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Register Form</title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+    <!-- <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&display=swap" rel="stylesheet"> -->
+    <!-- bootstrap CDN -->
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> -->
+    <!-- Bootstrap local file -->
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="./css/register.css" />
 </head>
 
 <body>
-    <div class="container-fluid whole-bg">
+    <main class="container-fluid whole-bg">
         <div class="row">
+            <!-- left side of page -->
             <div class="col-12 col-sm-12 col-md-3 col-lg-3 col-xl-3 left-side">
                 <div class="text-align-center">
                     <h1 class="welcome-text">Register Your Profile.</h1>
-                    <div class="ml-5">
+                    <div class="ml-5 mb-3">
                         <p class="ml-2 text-align-center">Already a User?</p>
-                        <a href="./index.html" class="btn btn-info font-weight-bold w-50">Login</a>
+                        <a href="./login.html" class="btn btn-info font-weight-bold mb-4 w-50">Login</a>
                     </div>
                 </div>
             </div>
+            <!-- register form side of page -->
             <div class="col-12 col-sm-12 col-md-9 col-lg-9 col-xl-9 pr-0">
                 <div class="container-fluid bg-light w-100 right-side">
                     <div class="row">
                         <div
                             class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 offset-md-3 offset-lg-3 offset-xl-3 mt-5">
-                            <div id="registerForm">
-                                <form onsubmit="register(); return false" class="text-dark ml-5 pl-5">
+                            <!-- register form starts -->
+                            <div id="registerForm" class="text-dark">
+                                <form onsubmit="register(); return false" class="ml-5 pl-5 pb-0 mb-0">
                                     <div class="form-group">
                                         <label for="firstName">First Name:</label>
                                         <input type="text" name="firstName" id="firstName" class="form-control"
@@ -54,9 +59,9 @@
                                     <div class="form-group">
                                         <label for="confirmPassword">Confirm Password :</label>
                                         <input type="password" name="confirmPassword" id="confirmPassword"
-                                            placeholder="Re-type Password" class="form-control">
+                                            placeholder="Re-type Password" class="form-control" required> <span id="passMsg" class="text-danger"></span>
                                     </div>
-                                    <input type="submit" value="Register" class="btn btn-info font-weight-bold">
+                                    <input type="submit" value="Register" id="regBtn" class="btn btn-info font-weight-bold">
                                 </form>
                             </div>
                         </div>
@@ -64,26 +69,8 @@
                 </div>
             </div>
         </div>
-    </div>
-    <!-- <script src="./js/register.js"></script> -->
-    <script>
-        function register(){
-            var firstName= document.getElementById("firstName").value;
-            var lastName = document.getElementById("lastName").value;
-            var email = document.getElementById("userEmail").value;
-            var password= document.getElementById("userPassword").value;
-            jsonData={firstName, lastName, email, password};
-            var http = new XMLHttpRequest();
-            http.onreadystatechange= function(){
-                if (this.readyState == 4 && this.status==200){
-                    alert(this.responseText.message);
-                }
-            };
-            http.open("POST", "http://127.0.0.1:3000/register");
-            http.setRequestHeader("content-type", "application/json;charset=UTF-8" )
-            http.send(JSON.stringify(jsonData));
-        };
-        </script>
+    </main>
+    <script src="./js/register.js"></script>
 </body>
 
 </html>

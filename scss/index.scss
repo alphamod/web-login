@@ -1,13 +1,3 @@
-@import "./variables";
-@import './gradientBg';
 @import './resets';
-
-.login-text{
-    height: 100%;
-    margin: 60% auto;
-    padding-left: 2rem;
-}
-
-.regForm{
-    margin: 8rem auto;
-}
+@import './variables';
+@import './gradientBg';

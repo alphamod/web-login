@@ -5,22 +5,19 @@
 }
 
 .right-side {
-  margin-top: 1rem;
-  margin-bottom: .90rem;
-  padding-bottom: 6.7rem;
+  margin: 1rem auto;
+  padding-bottom: 6.5rem;
   border-top-left-radius: 25% 50%;
   border-bottom-left-radius: 25% 50%;
 }
 
 html, body {
-  height: 100%;
   font-family: 'Roboto', sans-serif;
   padding: 0;
   margin: 0;
 }
 
 .welcome-text {
-  height: 100%;
   margin: 50% auto;
   margin-bottom: 45%;
   padding: 4rem 1rem;
