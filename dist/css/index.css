@@ -1,10 +1,5 @@
-html, body {
-  font-family: 'Roboto', sans-serif;
-  padding: 0;
-  margin: 0;
-}
-
 .whole-bg {
+  height: 100vh;
   background: -webkit-gradient(linear, left top, right top, from(#3f5efb), to(#fc466b));
   background: linear-gradient(left, #3f5efb, #fc466b);
   color: #ffffff;
@@ -15,5 +10,20 @@ html, body {
   padding-bottom: 6.5rem;
   border-top-left-radius: 25% 50%;
   border-bottom-left-radius: 25% 50%;
+}
+
+html, body {
+  font-family: 'Roboto', sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+.login-text {
+  margin: 60% auto;
+  padding-left: 2rem;
+}
+
+.loginForm {
+  margin: 8rem auto;
 }
 /*# sourceMappingURL=index.css.map */

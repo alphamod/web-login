@@ -1,0 +1,12 @@
+{
+    "version": 3,
+    "mappings": "ACAA,AAAA,IAAI,EAAE,IAAI,CAAA;EAEN,WAAW,EAAE,oBAAoB;EACjC,OAAO,EAAE,CAAC;EACV,MAAM,EAAE,CAAC;CACZ;;AELD,AAAA,SAAS,CAAA;EACL,MAAM,EAAE,KAAK;EACb,UAAU,EAAE,uCAA6C;EACzD,KAAK,EDHM,OAAO;CCIrB;;AACD,AAAA,WAAW,CAAA;EACP,MAAM,EAAE,SAAS;EACjB,cAAc,EAAE,MAAM;EACtB,sBAAsB,EAAE,OAAO;EAC/B,yBAAyB,EAAE,OAAO;CACrC;;AHND,AAAA,SAAS,CAAA;EACL,MAAM,EAAE,SAAS;CACpB",
+    "sources": [
+        "../../scss/profile.scss",
+        "../../scss/_resets.scss",
+        "../../scss/_variables.scss",
+        "../../scss/_gradientBg.scss"
+    ],
+    "names": [],
+    "file": "profile.css"
+}

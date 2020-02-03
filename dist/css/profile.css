@@ -1,0 +1,24 @@
+html, body {
+  font-family: 'Roboto', sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+.whole-bg {
+  height: 100vh;
+  background: -webkit-gradient(linear, left top, right top, from(#3f5efb), to(#fc466b));
+  background: linear-gradient(left, #3f5efb, #fc466b);
+  color: #ffffff;
+}
+
+.right-side {
+  margin: 1rem auto;
+  padding-bottom: 6.5rem;
+  border-top-left-radius: 25% 50%;
+  border-bottom-left-radius: 25% 50%;
+}
+
+.showInfo {
+  margin: 2rem 9rem;
+}
+/*# sourceMappingURL=profile.css.map */

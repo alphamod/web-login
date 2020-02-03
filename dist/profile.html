@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Profile</title>
+    <!-- <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&display=swap" rel="stylesheet"> -->
+    <!-- bootstrap CDN -->
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> -->
+    <!-- Bootstrap local file -->
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css" />
+    <script src="../node_modules/jquery/dist/jquery.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.js"></script>
+    <link rel="stylesheet" href="./css/profile.css"/>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="d-flex justify-content-end font-weight-bold navbar bg-light">
+        <div class="text-right m-2" id="greetUser">
+            Hello <span id="userName">User</span>
+            <span id="logOut" class="btn btn-info p-0 px-1 ml-2">Log Out</span>
+        </div>
+    </nav>
+    <!-- Main -->
+    <main class="container-fluid">
+        <div class="row whole-bg">
+            <div class="col-12 col sm-12 col-md-12 col-xl-12">
+                <!-- greeting user and logout button -->
+                <!-- card showing user profile info -->
+                <div class="showInfo card text-dark" id="showProfile">
+                    <!-- card header -->
+                    <div class="card-header"><h4 class="text-center">Your Info</h4></div>
+                    <div class="card-body">
+                        <p><b>Email:&nbsp;</b><span id="email"></span></p>
+                        <p><b>Date of Birth (mm/dd/yyyy):&nbsp;</b><span id="dob"></span></p>
+                        <p><b>Gender:&nbsp;</b><span id="gender"></span></p>
+                        <p><b>Phone:&nbsp;</b><span id="phone"></span></p>
+                        <p><b>About:&nbsp;</b><span id="about"></span></p>
+                        <!-- Modal to edit user profile -->
+                        <button class="text-decoration-none text-info btn" id="editProfileBtn" data-toggle="modal"
+                            data-target="#editProfModal">
+                            Edit Your Profile
+                        </button>
+                        <div id="editProfModal" class="modal">
+                            <div class="modal-dialog modal-dialog-centered">
+                                <div class="modal-content">
+                                    <!-- modal header -->
+                                    <div class="modal-header">
+                                        <h4 class="modal-title">Edit Profile</h4>
+                                        <button class="close" data-dismiss="modal">
+                                            &times;
+                                        </button>
+                                    </div>
+                                    <!-- modal body -->
+                                    <div class="modal-body">
+                                        <!-- modal form starts -->
+                                        <div class="editProfileForm">
+                                            <form id="updateForm">
+                                                <div class="form-group">
+                                                    <label for="dobForm" class="font-weight-bold">Date Of Birth:</label>
+                                                    <input type="date" name="dobForm" id="dobForm" class="form-control"
+                                                        placeholder="Enter your Date Of Birth" required/>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="sexForm" class="font-weight-bold">Gender: </label>
+                                                    <br />
+                                                    <input type="radio" value="Male" name="sexForm" checked/>Male
+                                                    <input type="radio" value="Female" name="sexForm" required/>Female
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="phoneForm" class="font-weight-bold">Phone Number: </label>
+                                                    <input type="text" name="phoneForm" id="phoneForm"
+                                                        class="form-control" placeholder="Enter your phone number" required/>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="aboutForm" class="font-weight-bold">Tell About Yourself: </label>
+                                                    <br />
+                                                    <textarea name="aboutForm" id="aboutForm"
+                                                        placeholder="Write about yourself" required></textarea>
+                                                </div>
+                                                <!-- Modal footer -->
+                                                <div class="modal-footer">
+                                                    <input type="submit" value="Update" class="btn btn-info " />
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="./js/profile.js"></script>
+</body>
+
+</html>
